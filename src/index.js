@@ -12,13 +12,22 @@ import { Auth0Provider } from "@auth0/auth0-react";
 // p4x5o3oJTbdR5a9zbuskyAShzLf3FrhD
 
 ReactDOM.render(
-  <ProductsProvider>
-    <FilterProvider>
-      <CartProvider>
-        <App />
-      </CartProvider>
-    </FilterProvider>
-  </ProductsProvider>,
+  <Auth0Provider
+    domain="dev-lqqazvjqgkr857gy.us.auth0.com"
+    clientId="p4x5o3oJTbdR5a9zbuskyAShzLf3FrhD"
+    redirectUri={window.location.origin}
+    cacheLocation="localstorage"
+  >
+    <UserProvider>
+      <ProductsProvider>
+        <FilterProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </FilterProvider>
+      </ProductsProvider>
+    </UserProvider>
+  </Auth0Provider>,
 
   document.getElementById("root")
 );
