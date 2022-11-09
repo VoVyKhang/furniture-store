@@ -6,6 +6,7 @@ import Cart from "../pages/CartPage";
 import Error from "../pages/ErrorPage";
 import Checkout from "../pages/CheckoutPage";
 import PrivateRoute from "../pages/PrivateRoute";
+import AuthWrapper from "../pages/AuthWrapper";
 
 export {
   Home,
@@ -16,4 +17,5 @@ export {
   Error,
   Checkout,
   PrivateRoute,
+  AuthWrapper,
 };
